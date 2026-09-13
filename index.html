@@ -1,8 +1,9 @@
 <!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanvir Hasan Anik - Portfolio</title><style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tanvir Hasan Anik | Portfolio</title>
+
+<style>
     * {
         margin: 0;
         padding: 0;
@@ -10,101 +11,259 @@
         font-family: Arial, sans-serif;
     }
 
-    body {
-        background: #0f172a;
-        color: white;
-        text-align: center;
+    html {
+        scroll-behavior: smooth;
     }
 
-    .container {
-        max-width: 900px;
-        margin: auto;
+    body {
+        background: #050816;
+        color: white;
+        line-height: 1.6;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(5, 8, 22, 0.95);
+        padding: 18px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #1e293b;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #38bdf8;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 15px;
+    }
+
+    nav a:hover {
+        color: #38bdf8;
+    }
+
+    .hero {
+        min-height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         padding: 50px 20px;
     }
 
     .profile {
-        width: 150px;
-        height: 150px;
+        width: 170px;
+        height: 170px;
         object-fit: cover;
         border-radius: 50%;
         border: 4px solid #38bdf8;
-        margin-bottom: 20px;
+        box-shadow: 0 0 35px rgba(56, 189, 248, 0.5);
+        margin-bottom: 25px;
     }
 
-    h1 {
-        font-size: 42px;
+    .hero h1 {
+        font-size: clamp(38px, 8vw, 70px);
         margin-bottom: 10px;
     }
 
-    h1 span {
+    .hero h1 span {
         color: #38bdf8;
     }
 
-    .intro {
-        font-size: 18px;
+    .hero p {
         color: #cbd5e1;
+        font-size: 19px;
         margin-bottom: 30px;
     }
 
-    .card {
-        background: #1e293b;
-        padding: 25px;
-        border-radius: 15px;
-        margin-top: 25px;
-    }
-
-    .card h2 {
-        color: #38bdf8;
-        margin-bottom: 15px;
-    }
-
-    .button {
+    .btn {
         display: inline-block;
-        margin-top: 25px;
-        padding: 12px 25px;
+        padding: 13px 28px;
         background: #38bdf8;
-        color: #0f172a;
+        color: #020617;
         text-decoration: none;
-        border-radius: 8px;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+    }
+
+    section {
+        padding: 80px 8%;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 40px;
+        color: #38bdf8;
+    }
+
+    .card {
+        background: #111827;
+        border: 1px solid #1e293b;
+        border-radius: 18px;
+        padding: 30px;
+        margin-bottom: 25px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        border-color: #38bdf8;
+    }
+
+    .card h3 {
+        color: #38bdf8;
+        margin-bottom: 12px;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 18px;
+    }
+
+    .skill {
+        background: #111827;
+        padding: 22px;
+        border-radius: 14px;
+        text-align: center;
+        border: 1px solid #1e293b;
         font-weight: bold;
     }
 
+    .contact {
+        text-align: center;
+    }
+
     footer {
-        margin-top: 50px;
+        text-align: center;
+        padding: 30px;
         color: #94a3b8;
+        border-top: 1px solid #1e293b;
+    }
+
+    @media (max-width: 600px) {
+        nav {
+            padding: 15px;
+        }
+
+        nav a {
+            margin-left: 8px;
+            font-size: 13px;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
     }
 </style>
 
-</head><body><div class="container">
+</head><body><nav>
+    <div class="logo">Anik</div>
 
-    <img src="20260906_123925~2.jpg" alt="Tanvir Hasan Anik" class="profile">
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    <h1>Hello, I'm <span>Tanvir Hasan Anik</span></h1>
+<div class="hero">
 
-    <p class="intro">
-        Welcome to my personal portfolio website.
-    </p>
+    <div>
+        <img
+            src="20260906_123925~2.jpg"
+            alt="Tanvir Hasan Anik"
+            class="profile"
+        >
+
+        <h1>Hi, I'm <span>Tanvir Hasan Anik</span></h1>
+
+        <p>
+            Web Developer • Learner • Creator
+        </p>
+
+        <a href="#about" class="btn">
+            Explore My Portfolio
+        </a>
+    </div>
+
+</div>
+
+<section id="about">
+
+    <h2 class="title">About Me</h2>
 
     <div class="card">
-        <h2>About Me</h2>
+        <h3>Hello 👋</h3>
+
         <p>
-            I'm learning web development and building my skills
-            step by step.
+            I'm Tanvir Hasan Anik. I'm learning web development
+            and building my skills step by step. This website is
+            my personal portfolio where I can showcase my work
+            and projects.
         </p>
     </div>
 
-    <div class="card">
-        <h2>My Skills</h2>
-        <p>HTML • CSS • JavaScript • Web Development</p>
+</section>
+
+<section id="skills">
+
+    <h2 class="title">My Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">HTML</div>
+
+        <div class="skill">CSS</div>
+
+        <div class="skill">JavaScript</div>
+
+        <div class="skill">Web Design</div>
+
     </div>
 
-    <a href="#" class="button">Contact Me</a>
+</section>
 
-    <footer>
-        © 2026 Tanvir Hasan Anik. All rights reserved.
-    </footer>
+<section id="contact">
 
-</div>
+    <h2 class="title">Contact Me</h2>
+
+    <div class="card contact">
+
+        <p>
+            Thanks for visiting my portfolio!
+        </p>
+
+        <br>
+
+        <a href="#" class="btn">
+            Get In Touch
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Tanvir Hasan Anik • My Portfolio
+</footer>
 
 </body>
 </html>
