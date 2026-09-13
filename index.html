@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#050816">
     <meta name="description" content="Tanvir Hasan Anik - Personal Portfolio">
 
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
 
     <style>
         * {
@@ -273,7 +273,7 @@
         <div class="hero-content">
 
             <img
-                src="20260906_123925~2.jpg"
+                src="./20260906_123925~2.jpg"
                 alt="Tanvir Hasan Anik"
                 class="profile"
             >
@@ -294,7 +294,7 @@
             <br>
 
             <a
-                href="Tanvir_Hasan_Anik_CV.pdf"
+                href="./Tanvir_Hasan_Anik_CV.pdf"
                 download
                 class="btn cv-btn"
             >
@@ -445,6 +445,21 @@
     <footer>
         © 2026 Tanvir Hasan Anik • My Portfolio
     </footer>
+
+    <!-- Service Worker -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register("./sw.js")
+                    .then(function () {
+                        console.log("Service Worker registered");
+                    })
+                    .catch(function (error) {
+                        console.log("Service Worker error:", error);
+                    });
+            });
+        }
+    </script>
 
 </body>
 </html>
