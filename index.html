@@ -6,6 +6,13 @@
 
     <title>Tanvir Hasan Anik | Portfolio</title>
 
+    <!-- PWA -->
+    <meta name="application-name" content="Anik Portfolio">
+    <meta name="theme-color" content="#050816">
+    <meta name="description" content="Tanvir Hasan Anik - Personal Portfolio">
+
+    <link rel="manifest" href="manifest.json">
+
     <style>
         * {
             margin: 0;
@@ -49,7 +56,6 @@
             text-decoration: none;
             margin-left: 22px;
             font-size: 15px;
-            transition: 0.3s;
         }
 
         nav a:hover {
@@ -63,24 +69,9 @@
             align-items: center;
             text-align: center;
             padding: 60px 20px;
-            position: relative;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: #0ea5e9;
-            filter: blur(150px);
-            opacity: 0.18;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
         }
 
         .hero-content {
-            position: relative;
             animation: fadeUp 1s ease;
         }
 
@@ -147,13 +138,6 @@
             border: 1px solid #1e293b;
             border-radius: 20px;
             padding: 32px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: #38bdf8;
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.12);
         }
 
         .card h3 {
@@ -183,7 +167,6 @@
         .project:hover {
             transform: translateY(-8px);
             border-color: #38bdf8;
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
         }
 
         .project-icon {
@@ -213,13 +196,6 @@
             text-align: center;
             border: 1px solid #1e293b;
             font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .skill:hover {
-            transform: scale(1.05);
-            border-color: #38bdf8;
-            color: #38bdf8;
         }
 
         .contact {
@@ -250,7 +226,6 @@
         }
 
         @media (max-width: 650px) {
-
             nav {
                 padding: 15px 12px;
             }
@@ -282,13 +257,8 @@
 
 <body>
 
-    <!-- NAVIGATION -->
-
     <nav>
-
-        <div class="logo">
-            Anik
-        </div>
+        <div class="logo">Anik</div>
 
         <div>
             <a href="#about">About</a>
@@ -296,11 +266,7 @@
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </div>
-
     </nav>
-
-
-    <!-- HERO -->
 
     <div class="hero">
 
@@ -313,7 +279,8 @@
             >
 
             <h1>
-                Hi, I'm <span>Tanvir Hasan Anik</span>
+                Hi, I'm
+                <span>Tanvir Hasan Anik</span>
             </h1>
 
             <p>
@@ -338,9 +305,6 @@
 
     </div>
 
-
-    <!-- ABOUT -->
-
     <section id="about">
 
         <h2 class="title">
@@ -354,18 +318,16 @@
             </h3>
 
             <p>
-                I'm Tanvir Hasan Anik. I'm learning web development
-                and improving my skills step by step. This portfolio
-                is a place where I can showcase my work, projects
-                and learning journey.
+                I'm Tanvir Hasan Anik.
+                I'm learning web development
+                and improving my skills step by step.
+                This portfolio is a place where I can
+                showcase my work, projects and learning journey.
             </p>
 
         </div>
 
     </section>
-
-
-    <!-- PROJECTS -->
 
     <section id="projects">
 
@@ -386,12 +348,10 @@
                 </h3>
 
                 <p>
-                    My personal portfolio website built using
-                    HTML and CSS.
+                    My personal portfolio website built using HTML and CSS.
                 </p>
 
             </div>
-
 
             <div class="project">
 
@@ -404,12 +364,11 @@
                 </h3>
 
                 <p>
-                    Practice projects focused on modern website
-                    design and responsive layouts.
+                    Practice projects focused on modern website design
+                    and responsive layouts.
                 </p>
 
             </div>
-
 
             <div class="project">
 
@@ -422,8 +381,7 @@
                 </h3>
 
                 <p>
-                    Small learning projects created while practicing
-                    JavaScript.
+                    Small learning projects created while practicing JavaScript.
                 </p>
 
             </div>
@@ -431,9 +389,6 @@
         </div>
 
     </section>
-
-
-    <!-- SKILLS -->
 
     <section id="skills">
 
@@ -463,9 +418,6 @@
 
     </section>
 
-
-    <!-- CONTACT -->
-
     <section id="contact">
 
         <h2 class="title">
@@ -490,13 +442,8 @@
 
     </section>
 
-
-    <!-- FOOTER -->
-
     <footer>
-
         © 2026 Tanvir Hasan Anik • My Portfolio
-
     </footer>
 
 </body>
