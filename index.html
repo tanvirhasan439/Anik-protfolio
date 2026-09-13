@@ -1,367 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanvir Hasan Anik - Portfolio</title><style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
 
-    <title>Tanvir - Web Developer</title>
+    body {
+        background: #0f172a;
+        color: white;
+        text-align: center;
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 50px 20px;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    .profile {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #38bdf8;
+        margin-bottom: 20px;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-            line-height: 1.6;
-        }
+    h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(2, 6, 23, 0.95);
-            padding: 18px 10px;
-            text-align: center;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
-        }
+    h1 span {
+        color: #38bdf8;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    .intro {
+        font-size: 18px;
+        color: #cbd5e1;
+        margin-bottom: 30px;
+    }
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+    .card {
+        background: #1e293b;
+        padding: 25px;
+        border-radius: 15px;
+        margin-top: 25px;
+    }
 
-        /* Home */
-        header {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 100px 20px 20px;
-        }
+    .card h2 {
+        color: #38bdf8;
+        margin-bottom: 15px;
+    }
 
-        .hero {
-            animation: fadeUp 1.2s ease;
-        }
+    .button {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 12px 25px;
+        background: #38bdf8;
+        color: #0f172a;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
 
-        .hero h1 {
-            font-size: 45px;
-        }
+    footer {
+        margin-top: 50px;
+        color: #94a3b8;
+    }
+</style>
 
-        .hero h1 span {
-            color: #38bdf8;
-        }
+</head><body><div class="container">
 
-        .hero p {
-            font-size: 20px;
-            color: #cbd5e1;
-            margin: 15px 0 30px;
-        }
+    <img src="20260906_123925~2.jpg" alt="Tanvir Hasan Anik" class="profile">
 
-        /* Profile Photo */
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 4px solid #38bdf8;
-            animation: float 3s ease-in-out infinite;
-            box-shadow: 0 0 25px rgba(56,189,248,0.4);
-        }
+    <h1>Hello, I'm <span>Tanvir Hasan Anik</span></h1>
 
-        /* Buttons */
-        .btn,
-        .github-btn {
-            display: inline-block;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    <p class="intro">
+        Welcome to my personal portfolio website.
+    </p>
 
-        .btn {
-            background: #38bdf8;
-            color: #0f172a;
-        }
-
-        .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(56,189,248,0.3);
-        }
-
-        /* Sections */
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        h2 {
-            color: #38bdf8;
-            font-size: 32px;
-            margin-bottom: 25px;
-        }
-
-        .about-text {
-            color: #cbd5e1;
-            font-size: 18px;
-        }
-
-        /* Skills & Projects */
-        .skills,
-        .projects {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 10px;
-            min-width: 180px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-
-        .card h3 {
-            color: #38bdf8;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #cbd5e1;
-        }
-
-        /* Contact */
-        .contact p {
-            color: #cbd5e1;
-            margin-bottom: 15px;
-        }
-
-        .github-btn {
-            margin-top: 10px;
-            background: white;
-            color: #0f172a;
-        }
-
-        .github-btn:hover {
-            background: #38bdf8;
-            transform: translateY(-4px);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #020617;
-            color: #94a3b8;
-        }
-
-        /* Animations */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 600px) {
-
-            nav a {
-                margin: 0 4px;
-                font-size: 13px;
-            }
-
-            .hero h1 {
-                font-size: 35px;
-            }
-
-            .profile-img {
-                width: 130px;
-                height: 130px;
-            }
-
-            section {
-                padding: 65px 15px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Home -->
-    <header id="home">
-
-        <div class="hero">
-
-            <img src="20260906_123925~2.jpg"
-                 alt="Tanvir"
-                 class="profile-img">
-
-            <h1>Hi, I'm <span>Tanvir</span></h1>
-
-            <p>I'm a Web Developer</p>
-
-            <a href="#about" class="btn">
-                About Me
-            </a>
-
-        </div>
-
-    </header>
-
-    <!-- About -->
-    <section id="about">
-
+    <div class="card">
         <h2>About Me</h2>
-
-        <p class="about-text">
-            Hello! I'm Tanvir.
-            I'm learning Web Development and building websites
-            using HTML, CSS and JavaScript.
+        <p>
+            I'm learning web development and building my skills
+            step by step.
         </p>
+    </div>
 
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-
+    <div class="card">
         <h2>My Skills</h2>
+        <p>HTML • CSS • JavaScript • Web Development</p>
+    </div>
 
-        <div class="skills">
+    <a href="#" class="button">Contact Me</a>
 
-            <div class="card">
-                <h3>HTML</h3>
-                <p>Web page structure</p>
-            </div>
-
-            <div class="card">
-                <h3>CSS</h3>
-                <p>Website design</p>
-            </div>
-
-            <div class="card">
-                <h3>JavaScript</h3>
-                <p>Website functionality</p>
-            </div>
-
-            <div class="card">
-                <h3>GitHub</h3>
-                <p>Code management</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-
-        <h2>My Projects</h2>
-
-        <div class="projects">
-
-            <div class="card">
-                <h3>My First Website</h3>
-                <p>My first HTML website.</p>
-            </div>
-
-            <div class="card">
-                <h3>Portfolio Website</h3>
-                <p>My personal developer portfolio.</p>
-            </div>
-
-            <div class="card">
-                <h3>Coming Soon</h3>
-                <p>More projects are coming soon.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-
-        <h2>Contact Me</h2>
-
-        <div class="contact">
-
-            <p>
-                Thanks for visiting my portfolio!
-            </p>
-
-            <p>
-                You can contact me for web development projects.
-            </p>
-
-            <a href="https://github.com/tanvirhasan439"
-               target="_blank"
-               class="github-btn">
-                🐙 Visit My GitHub
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- Footer -->
     <footer>
-        © 2026 Tanvir | Web Developer
+        © 2026 Tanvir Hasan Anik. All rights reserved.
     </footer>
+
+</div>
 
 </body>
 </html>
