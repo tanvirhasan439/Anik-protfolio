@@ -1,0 +1,10 @@
+{
+  "name": "Tanvir Hasan Anik Portfolio",
+  "short_name": "Anik Portfolio",
+  "description": "Tanvir Hasan Anik - Personal Portfolio",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#38bdf8",
+  "orientation": "portrait"
+}
