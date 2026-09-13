@@ -22,22 +22,26 @@
             background: #050816;
             color: white;
             line-height: 1.6;
+            overflow-x: hidden;
         }
+
+        /* NAVBAR */
 
         nav {
             position: sticky;
             top: 0;
-            z-index: 100;
-            background: rgba(5, 8, 22, 0.95);
-            padding: 18px 8%;
+            z-index: 1000;
+            padding: 18px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: rgba(5, 8, 22, 0.92);
+            backdrop-filter: blur(12px);
             border-bottom: 1px solid #1e293b;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
             color: #38bdf8;
         }
@@ -45,13 +49,16 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
+            margin-left: 22px;
             font-size: 15px;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #38bdf8;
         }
+
+        /* HERO */
 
         .hero {
             min-height: 90vh;
@@ -59,22 +66,41 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #0ea5e9;
+            filter: blur(150px);
+            opacity: 0.18;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .hero-content {
+            position: relative;
+            animation: fadeUp 1s ease;
         }
 
         .profile {
-            width: 170px;
-            height: 170px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 50%;
             border: 4px solid #38bdf8;
-            box-shadow: 0 0 35px rgba(56, 189, 248, 0.5);
+            box-shadow: 0 0 35px rgba(56, 189, 248, 0.6);
             margin-bottom: 25px;
         }
 
         .hero h1 {
             font-size: clamp(38px, 8vw, 70px);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .hero h1 span {
@@ -89,7 +115,7 @@
 
         .btn {
             display: inline-block;
-            padding: 13px 28px;
+            padding: 14px 30px;
             background: #38bdf8;
             color: #020617;
             text-decoration: none;
@@ -99,62 +125,76 @@
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.7);
         }
 
+        /* SECTIONS */
+
         section {
-            padding: 80px 8%;
+            padding: 90px 8%;
             max-width: 1100px;
             margin: auto;
         }
 
         .title {
             text-align: center;
-            font-size: 35px;
-            margin-bottom: 40px;
+            font-size: 38px;
+            margin-bottom: 45px;
             color: #38bdf8;
         }
 
+        /* ABOUT */
+
         .card {
-            background: #111827;
+            background: rgba(17, 24, 39, 0.85);
             border: 1px solid #1e293b;
-            border-radius: 18px;
-            padding: 30px;
-            margin-bottom: 25px;
+            border-radius: 20px;
+            padding: 32px;
             transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
             border-color: #38bdf8;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.12);
         }
 
         .card h3 {
             color: #38bdf8;
             margin-bottom: 12px;
+            font-size: 24px;
         }
 
-        /* Projects */
+        .card p {
+            color: #cbd5e1;
+        }
+
+        /* PROJECTS */
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
         }
 
         .project {
             background: #111827;
             border: 1px solid #1e293b;
-            border-radius: 18px;
-            padding: 25px;
+            border-radius: 20px;
+            padding: 28px;
             transition: 0.3s;
         }
 
         .project:hover {
-            transform: translateY(-6px);
+            transform: translateY(-8px);
             border-color: #38bdf8;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+        }
+
+        .project-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
         }
 
         .project h3 {
@@ -166,6 +206,8 @@
             color: #cbd5e1;
         }
 
+        /* SKILLS */
+
         .skills {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -174,37 +216,81 @@
 
         .skill {
             background: #111827;
-            padding: 22px;
-            border-radius: 14px;
+            padding: 24px;
+            border-radius: 16px;
             text-align: center;
             border: 1px solid #1e293b;
             font-weight: bold;
+            transition: 0.3s;
         }
+
+        .skill:hover {
+            transform: scale(1.05);
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        /* CONTACT */
 
         .contact {
             text-align: center;
         }
 
+        .contact p {
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 35px 20px;
             color: #94a3b8;
             border-top: 1px solid #1e293b;
         }
 
-        @media (max-width: 600px) {
+        /* ANIMATION */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
 
             nav {
-                padding: 15px;
+                padding: 15px 12px;
+            }
+
+            .logo {
+                font-size: 22px;
             }
 
             nav a {
                 margin-left: 8px;
-                font-size: 13px;
+                font-size: 12px;
             }
 
             section {
-                padding: 60px 20px;
+                padding: 65px 20px;
+            }
+
+            .title {
+                font-size: 32px;
+            }
+
+            .profile {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
@@ -212,7 +298,7 @@
 
 <body>
 
-    <!-- Navigation -->
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -230,11 +316,11 @@
     </nav>
 
 
-    <!-- Hero -->
+    <!-- HERO -->
 
     <div class="hero">
 
-        <div>
+        <div class="hero-content">
 
             <img
                 src="20260906_123925~2.jpg"
@@ -251,7 +337,7 @@
             </p>
 
             <a href="#projects" class="btn">
-                Explore My Projects
+                Explore My Work
             </a>
 
         </div>
@@ -259,7 +345,7 @@
     </div>
 
 
-    <!-- About -->
+    <!-- ABOUT -->
 
     <section id="about">
 
@@ -275,9 +361,9 @@
 
             <p>
                 I'm Tanvir Hasan Anik. I'm learning web development
-                and building my skills step by step. This website is
-                my personal portfolio where I can showcase my work
-                and projects.
+                and improving my skills step by step. This portfolio
+                is a place where I can showcase my work, projects
+                and learning journey.
             </p>
 
         </div>
@@ -285,7 +371,7 @@
     </section>
 
 
-    <!-- Projects -->
+    <!-- PROJECTS -->
 
     <section id="projects">
 
@@ -297,13 +383,17 @@
 
             <div class="project">
 
+                <div class="project-icon">
+                    🌐
+                </div>
+
                 <h3>
-                    🌐 Portfolio Website
+                    Portfolio Website
                 </h3>
 
                 <p>
-                    My personal portfolio website built with HTML
-                    and CSS.
+                    My personal portfolio website built using
+                    HTML and CSS.
                 </p>
 
             </div>
@@ -311,13 +401,17 @@
 
             <div class="project">
 
+                <div class="project-icon">
+                    🎨
+                </div>
+
                 <h3>
-                    🎨 Web Design Practice
+                    Web Design
                 </h3>
 
                 <p>
-                    Practice projects for learning modern website
-                    design and layouts.
+                    Practice projects focused on modern website
+                    design and responsive layouts.
                 </p>
 
             </div>
@@ -325,12 +419,16 @@
 
             <div class="project">
 
+                <div class="project-icon">
+                    ⚡
+                </div>
+
                 <h3>
-                    ⚡ JavaScript Practice
+                    JavaScript Practice
                 </h3>
 
                 <p>
-                    Small practice projects while learning
+                    Small learning projects created while practicing
                     JavaScript.
                 </p>
 
@@ -341,7 +439,7 @@
     </section>
 
 
-    <!-- Skills -->
+    <!-- SKILLS -->
 
     <section id="skills">
 
@@ -372,7 +470,7 @@
     </section>
 
 
-    <!-- Contact -->
+    <!-- CONTACT -->
 
     <section id="contact">
 
@@ -386,14 +484,12 @@
                 Thanks for visiting my portfolio!
             </p>
 
-            <br>
-
             <a
                 href="https://www.facebook.com/share/1PvmnkrFrt/"
                 target="_blank"
                 class="btn"
             >
-                Connect With Me on Facebook
+                Connect With Me
             </a>
 
         </div>
@@ -401,7 +497,7 @@
     </section>
 
 
-    <!-- Footer -->
+    <!-- FOOTER -->
 
     <footer>
 
