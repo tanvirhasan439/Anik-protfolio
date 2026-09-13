@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanvir Hasan Anik - Web Developer</title>
+    <title>Tanvir - Web Developer</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
         }
 
         body {
+            font-family: Arial, sans-serif;
             background: #0f172a;
             color: white;
-            line-height: 1.6;
         }
 
         header {
@@ -28,49 +27,43 @@
             padding: 20px;
         }
 
-        .hero h1 {
+        h1 {
             font-size: 45px;
-            margin-bottom: 10px;
         }
 
-        .hero h1 span {
+        h1 span {
             color: #38bdf8;
         }
 
         .hero p {
             font-size: 20px;
             color: #cbd5e1;
-            margin-bottom: 25px;
+            margin: 15px 0 25px;
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 25px;
             background: #38bdf8;
             color: #0f172a;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
         }
 
         section {
-            padding: 60px 20px;
             max-width: 900px;
             margin: auto;
+            padding: 70px 20px;
+            text-align: center;
         }
 
         h2 {
-            text-align: center;
             color: #38bdf8;
             margin-bottom: 25px;
             font-size: 32px;
         }
 
-        .about, .skills, .contact {
-            text-align: center;
-        }
-
-        .skills-list {
+        .skills {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -98,25 +91,23 @@
         <div class="hero">
             <h1>Hi, I'm <span>Tanvir</span></h1>
             <p>I'm a Web Developer</p>
-            <a href="#about" class="btn">Explore My Portfolio</a>
+            <a href="#about" class="btn">About Me</a>
         </div>
     </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <div class="about">
-            <p>
-                Hello! I'm Tanvir Hasan Anik.
-                I am learning web development and building my skills
-                in HTML, CSS and JavaScript.
-            </p>
-        </div>
+        <p>
+            Hello! I'm Tanvir.
+            I'm learning Web Development and building websites
+            using HTML, CSS and JavaScript.
+        </p>
     </section>
 
-    <section id="skills">
+    <section>
         <h2>My Skills</h2>
 
-        <div class="skills-list">
+        <div class="skills">
             <div class="skill">HTML</div>
             <div class="skill">CSS</div>
             <div class="skill">JavaScript</div>
@@ -124,16 +115,8 @@
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <div class="contact">
-            <p>Thanks for visiting my portfolio!</p>
-        </div>
-    </section>
-
     <footer>
-        © 2026 Tanvir Hasan Anik | Web Developer
+        © 2026 Tanvir | Web Developer
     </footer>
 
 </body>
