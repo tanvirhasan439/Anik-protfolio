@@ -24,13 +24,36 @@
             line-height: 1.6;
         }
 
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #020617;
+            padding: 18px 20px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Home */
         header {
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
+            padding: 80px 20px 20px;
         }
 
         .hero h1 {
@@ -57,10 +80,11 @@
             font-weight: bold;
         }
 
+        /* Sections */
         section {
             max-width: 900px;
             margin: auto;
-            padding: 70px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
@@ -75,6 +99,7 @@
             font-size: 18px;
         }
 
+        /* Skills & Projects */
         .skills,
         .projects {
             display: flex;
@@ -91,45 +116,64 @@
         }
 
         .card h3 {
-            margin-bottom: 10px;
             color: #38bdf8;
+            margin-bottom: 10px;
         }
 
         .card p {
             color: #cbd5e1;
         }
 
+        /* Contact */
         .contact p {
             color: #cbd5e1;
             margin-bottom: 15px;
         }
 
+        /* Footer */
         footer {
             text-align: center;
             padding: 25px;
             background: #020617;
             color: #94a3b8;
         }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            nav a {
+                margin: 0 5px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <!-- Home -->
-    <header>
+    <header id="home">
         <div class="hero">
             <h1>Hi, I'm <span>Tanvir</span></h1>
-
             <p>I'm a Web Developer</p>
-
             <a href="#about" class="btn">About Me</a>
         </div>
     </header>
 
-
     <!-- About -->
     <section id="about">
-
         <h2>About Me</h2>
 
         <p class="about-text">
@@ -137,13 +181,10 @@
             I'm learning Web Development and building websites
             using HTML, CSS and JavaScript.
         </p>
-
     </section>
-
 
     <!-- Skills -->
     <section id="skills">
-
         <h2>My Skills</h2>
 
         <div class="skills">
@@ -169,13 +210,10 @@
             </div>
 
         </div>
-
     </section>
-
 
     <!-- Projects -->
     <section id="projects">
-
         <h2>My Projects</h2>
 
         <div class="projects">
@@ -196,44 +234,22 @@
             </div>
 
         </div>
-
     </section>
-
 
     <!-- Contact -->
     <section id="contact">
-
         <h2>Contact Me</h2>
 
         <div class="contact">
-
-            <p>
-                Thanks for visiting my portfolio!
-            </p>
-
-            <p>
-                You can contact me for web development projects.
-            </p>
-
+            <p>Thanks for visiting my portfolio!</p>
+            <p>You can contact me for web development projects.</p>
         </div>
-
     </section>
-
 
     <!-- Footer -->
     <footer>
-
         © 2026 Tanvir | Web Developer
-
     </footer>
 
 </body>
 </html>
-
-এখন কী করবে
-
-Acode → পুরোনো কোড Delete → উপরের পুরো কোড Paste → Save 💾
-
-তারপর GitHub → "index.html" → Edit file → In place → পুরোনো কোড Delete → এই পুরো কোড Paste → Commit changes → Visit site।
-
-এবার তোমার সাইটে Home → About Me → My Skills → My Projects → Contact Me সব থাকবে। 🚀
