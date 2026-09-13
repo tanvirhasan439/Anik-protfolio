@@ -29,10 +29,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: #020617;
+            background: rgba(2, 6, 23, 0.95);
             padding: 18px 10px;
             text-align: center;
             z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
         }
 
         nav a {
@@ -40,6 +41,7 @@
             text-decoration: none;
             margin: 0 8px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -54,6 +56,10 @@
             align-items: center;
             text-align: center;
             padding: 100px 20px 20px;
+        }
+
+        .hero {
+            animation: fadeUp 1.2s ease;
         }
 
         .hero h1 {
@@ -78,16 +84,29 @@
             object-fit: cover;
             margin-bottom: 20px;
             border: 4px solid #38bdf8;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 0 25px rgba(56,189,248,0.4);
         }
 
-        .btn {
+        /* Buttons */
+        .btn,
+        .github-btn {
             display: inline-block;
-            background: #38bdf8;
-            color: #0f172a;
             padding: 12px 25px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(56,189,248,0.3);
         }
 
         /* Sections */
@@ -123,6 +142,12 @@
             padding: 25px;
             border-radius: 10px;
             min-width: 180px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
         .card h3 {
@@ -140,21 +165,15 @@
             margin-bottom: 15px;
         }
 
-        /* GitHub Button */
         .github-btn {
-            display: inline-block;
             margin-top: 10px;
-            padding: 12px 25px;
-            background: #ffffff;
+            background: white;
             color: #0f172a;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
         }
 
         .github-btn:hover {
             background: #38bdf8;
-            color: #0f172a;
+            transform: translateY(-4px);
         }
 
         /* Footer */
@@ -165,8 +184,32 @@
             color: #94a3b8;
         }
 
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
         /* Mobile */
         @media (max-width: 600px) {
+
             nav a {
                 margin: 0 4px;
                 font-size: 13px;
@@ -179,6 +222,10 @@
             .profile-img {
                 width: 130px;
                 height: 130px;
+            }
+
+            section {
+                padding: 65px 15px;
             }
         }
     </style>
@@ -197,6 +244,7 @@
 
     <!-- Home -->
     <header id="home">
+
         <div class="hero">
 
             <img src="20260906_123925~2.jpg"
@@ -207,9 +255,12 @@
 
             <p>I'm a Web Developer</p>
 
-            <a href="#about" class="btn">About Me</a>
+            <a href="#about" class="btn">
+                About Me
+            </a>
 
         </div>
+
     </header>
 
     <!-- About -->
