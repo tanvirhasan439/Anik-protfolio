@@ -1,544 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Tanvir - Web Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanvir Hasan Anik - Web Developer</title>
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #222;
-}
+        body {
+            background: #0f172a;
+            color: white;
+            line-height: 1.6;
+        }
 
-header {
-    background: #2563eb;
-    color: white;
-    padding: 18px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
 
-.logo-circle {
-    width: 45px;
-    height: 45px;
-    background: white;
-    color: #2563eb;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
+        .hero h1 span {
+            color: #38bdf8;
+        }
 
-header h2 {
-    margin: 0;
-}
+        .hero p {
+            font-size: 20px;
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-}
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
 
-/* HERO */
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
 
-.hero {
-    min-height: 520px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 8%;
-    background: white;
-    gap: 40px;
-}
+        h2 {
+            text-align: center;
+            color: #38bdf8;
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
 
-.hero-text {
-    max-width: 600px;
-}
+        .about, .skills, .contact {
+            text-align: center;
+        }
 
-.hero-text small {
-    color: #2563eb;
-    font-weight: bold;
-    font-size: 16px;
-}
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-.hero h1 {
-    font-size: 50px;
-    margin: 15px 0;
-}
+        .skill {
+            background: #1e293b;
+            padding: 15px 25px;
+            border-radius: 8px;
+        }
 
-.hero h1 span {
-    color: #2563eb;
-}
-
-.hero p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #555;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 28px;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.hero-image {
-    width: 330px;
-    height: 330px;
-    background: #dbeafe;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 110px;
-}
-
-/* SKILLS */
-
-.skills {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.skills h2,
-.projects h2,
-.about h2,
-.contact h2 {
-    font-size: 32px;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.card {
-    background: white;
-    width: 280px;
-    padding: 30px 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px #ddd;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card-icon {
-    font-size: 45px;
-}
-
-.card h3 {
-    color: #2563eb;
-}
-
-/* PROJECTS */
-
-.projects {
-    background: #eef4ff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.project-card {
-    background: white;
-    width: 300px;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px #ddd;
-}
-
-.project-image {
-    height: 150px;
-    background: #dbeafe;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-}
-
-.project-card h3 {
-    color: #2563eb;
-}
-
-/* ABOUT */
-
-.about {
-    background: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.about p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* CONTACT */
-
-.contact {
-    background: #eaf1ff;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.contact-box {
-    max-width: 450px;
-    margin: auto;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px #ddd;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 13px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-}
-
-textarea {
-    height: 120px;
-    resize: none;
-}
-
-/* FOOTER */
-
-footer {
-    background: #111827;
-    color: white;
-    text-align: center;
-    padding: 25px;
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav a {
-        margin: 5px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 50px 20px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .hero-image {
-        width: 250px;
-        height: 250px;
-        font-size: 80px;
-    }
-}
-</style>
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #94a3b8;
+        }
+    </style>
 </head>
-
 
 <body>
 
-<header>
-
-<div class="logo">
-
-<div class="logo-circle">
-T
-</div>
-
-<h2>Tanvir</h2>
-
-</div>
-
-<nav>
-
-<a href="#">Home</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-text">
-
-<small>HELLO, I'M TANVIR 👋</small>
-
-<h1>
-I'm a <span>Web Developer</span>
-</h1>
-
-<p>
-I create modern, clean and mobile-friendly websites
-for businesses and individuals.
-</p>
-
-<a class="btn" href="#projects">
-View My Work
-</a>
-
-</div>
-
-<div class="hero-image">
-👨‍💻
-</div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills" class="skills">
-
-<h2>My Skills</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<div class="card-icon">
-🌐
-</div>
-
-<h3>HTML</h3>
-
-<p>
-I can create the structure of modern websites.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-icon">
-🎨
-</div>
-
-<h3>CSS</h3>
-
-<p>
-I can create beautiful and responsive designs.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-icon">
-⚡
-</div>
-
-<h3>JavaScript</h3>
-
-<p>
-I am learning JavaScript to make websites interactive.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects" class="projects">
-
-<h2>My Projects</h2>
-
-<div class="cards">
-
-
-<div class="project-card">
-
-<div class="project-image">
-🌐
-</div>
-
-<h3>Business Website</h3>
-
-<p>
-Modern business website design.
-</p>
-
-</div>
-
-
-<div class="project-card">
-
-<div class="project-image">
-🍔
-</div>
-
-<h3>Restaurant Website</h3>
-
-<p>
-Simple restaurant website.
-</p>
-
-</div>
-
-
-<div class="project-card">
-
-<div class="project-image">
-👨‍💻
-</div>
-
-<h3>Personal Portfolio</h3>
-
-<p>
-My personal developer portfolio.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about" class="about">
-
-<h2>About Me</h2>
-
-<p>
-I am Tanvir, a beginner web developer.
-I enjoy learning web development and creating
-simple, modern and useful websites.
-My goal is to improve my skills and work with
-clients through freelancing.
-</p>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-<h2>Contact Me</h2>
-
-<div class="contact-box">
-
-<input
-id="name"
-type="text"
-placeholder="Your Name">
-
-<input
-id="email"
-type="email"
-placeholder="Your Email">
-
-<textarea
-id="message"
-placeholder="Your Message"></textarea>
-
-<button
-class="btn"
-onclick="sendMessage()">
-
-Send Message
-
-</button>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 Tanvir - Web Developer</p>
-
-<p>All Rights Reserved</p>
-
-</footer>
-
-
-<script>
-
-function sendMessage() {
-
-let name =
-document.getElementById("name").value;
-
-let email =
-document.getElementById("email").value;
-
-let message =
-document.getElementById("message").value;
-
-
-if (
-name === "" ||
-email === "" ||
-message === ""
-) {
-
-alert("সব ঘর পূরণ করো!");
-
-return;
-
-}
-
-alert("Message sent successfully!");
-
-}
-
-</script>
+    <header>
+        <div class="hero">
+            <h1>Hi, I'm <span>Tanvir</span></h1>
+            <p>I'm a Web Developer</p>
+            <a href="#about" class="btn">Explore My Portfolio</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about">
+            <p>
+                Hello! I'm Tanvir Hasan Anik.
+                I am learning web development and building my skills
+                in HTML, CSS and JavaScript.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills-list">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">GitHub</div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <div class="contact">
+            <p>Thanks for visiting my portfolio!</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Tanvir Hasan Anik | Web Developer
+    </footer>
 
 </body>
 </html>
